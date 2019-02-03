@@ -78,7 +78,7 @@ if __name__ == "__main__":
     # 创建一个消息队列对象
     q = Queue()
     # 构造url_list列表
-    url_list = ["https://www.neihan8.com/wenzi/index.html"]
+    url_list = ["https://www.neihan8.com/wenzi/index.html"]\
                + [(URL %i) for i in range(2,202)]
     # 创建一个线程列表
     thread_list = []
@@ -90,6 +90,7 @@ if __name__ == "__main__":
         thread_list.append(t)
     for i in thread_list:
         i.join()
+
 
 
 
