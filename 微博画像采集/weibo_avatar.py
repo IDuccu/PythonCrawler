@@ -17,6 +17,7 @@ import requests
 def get_user_info(uid):
     result = requests.get(f'https://m.weibo.cn/api/container/getIndex?type=uid&value={uid}')
     json_data = result.json()['data']
+    # 获取用户信息
     userinfo = {
         'name': json_data['userInfo']['screen_name'],
         'description': json_data['userInfo']['description'],
